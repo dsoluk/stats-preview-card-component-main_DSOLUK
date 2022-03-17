@@ -42,7 +42,6 @@ body {
   /* ------------------------------- */
 
 .image-box {
-  grid-area: image;
   background-color: var(--Soft-violet-accent);
   border-radius: 15px 15px 0px 0px;
   /* margin: 0; */
@@ -60,7 +59,7 @@ img {
   ------------------------------------- */
 .main-copy {
   text-align: center;
-  padding: 0 15px 0 15px;
+  padding: 20px;
   background-color: var(--Dark-desaturated-blue-cardBG);
 }
 .main-copy > h1 {
@@ -82,7 +81,6 @@ h1 > span {
   ------------------------------------- */
 .main-stats {
   background-color: var(--Dark-desaturated-blue-cardBG);
-  grid-area: stats;
   display: flex;
   flex-direction: column;
   justify-content: center;
