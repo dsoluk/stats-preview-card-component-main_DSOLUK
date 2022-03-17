@@ -21,24 +21,17 @@ body {
   font-family: "Lexend Deca", sans-serif;
   font-size: 15px;
 
-  display: grid;
-  grid-template-columns: 270px;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "image"
-    "copy"
-    "stats"
-    "footer";
-  justify-content: center;
-  align-items: center;
-
   box-sizing: border-box;
 }
 
 /* Main / Card Styles
   /* ------------------------------- */
 
-.grid-card {
+.card-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-radius: 15px;
 
   margin-left: auto;
@@ -52,7 +45,7 @@ body {
   grid-area: image;
   background-color: var(--Soft-violet-accent);
   border-radius: 15px 15px 0px 0px;
-  margin: 0;
+  /* margin: 0; */
 }
 
 img {
@@ -66,13 +59,13 @@ img {
 /* Copy (h1 and p) section
   ------------------------------------- */
 .main-copy {
-  grid-area: copy;
   text-align: center;
   padding: 0 15px 0 15px;
   background-color: var(--Dark-desaturated-blue-cardBG);
 }
 .main-copy > h1 {
   color: var(--White-main-heading-stats);
+  margin-top: 0;
 }
 
 h1 > span {
@@ -82,6 +75,7 @@ h1 > span {
 .main-copy > p {
   color: var(--Slightly-transparent-white-main-para);
   font-size: smaller;
+  margin-bottom: 0;
 }
 
 /* Stats section
@@ -94,7 +88,7 @@ h1 > span {
   justify-content: center;
   align-items: center;
   border-radius: 0 0 12px 12px;
-  margin-top: 0;
+  /* margin-top: 0; */
 }
 
 .stats {
@@ -105,21 +99,17 @@ h1 > span {
 .stats > h1 {
   color: var(--White-main-heading-stats);
   margin-bottom: 0;
-  margin-top: 0.25em;
 }
 
 .stats > p {
   color: var(--Slightly-transparent-white-stat-headings);
   text-transform: uppercase;
   margin-top: 0;
-  margin-bottom: 0.5em;
-  padding-right: 0.5em;
 }
 
 /* Attribution section
   ------------------------------------- */
 .attribution {
-  grid-area: footer;
   font-size: 11px;
   text-align: center;
   color: grey;
@@ -130,26 +120,26 @@ h1 > span {
 /* Media Query for desktop screen sizes
   ------------------------------------- */
 @media screen and (min-width: 800px) {
-  body {
-    display: grid;
-    grid-template-columns: repeat (2, 300px);
-    grid-template-rows: 150px calc(220.18 - 150) px;
-    grid-template-areas:
-      "copy image "
-      "stats image"
-      "footer footer";
-    justify-content: center;
+  .card-wrap {
+    flex-direction: row-reverse;
     align-items: left;
+    justify-content: center;
 
     box-sizing: border-box;
 
-    margin: 120px 70px 120px 70px;
+    margin: auto;
+    width: 600px;
+    height: 100vh;
+
+    /* margin: 120px 70px 120px 70px; */
   }
 
   .image-box {
     border-radius: 0 12px 12px 0;
-    width: 300px;
+    /* width: 300px; */
+    /* position: relative; */
     position: relative;
+    max-width: 300px;
   }
 
   .main-copy {
@@ -157,18 +147,18 @@ h1 > span {
     border-radius: 12px 0 0 0;
     margin: 0;
     border-left: 0px;
-    padding: 0 15px 0 15px;
+    padding: 0 30px 0 30px;
   }
 
   .main-stats {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: left;
     border-radius: 0 0 0 12px;
     margin: none;
     border: none;
-    padding: 0 15px 0 15px;
+    padding: 0 30px 0 30px;
   }
 
   .stats {
