@@ -24,8 +24,8 @@ Users should be able to:
 
 ### Screenshot
 
-![mobile](/screenshot_mobile.png)
-![desktop](/screenshot_desktop.png)
+![mobile](/screenshot-mobile-v2.png.png)
+![desktop](/screenshot-desktop-v2.png)
 
 ### Links
 
@@ -44,6 +44,10 @@ Users should be able to:
 - Lots of patience with aligning elements...not getting it yet! :->
 
 ### What I learned
+
+Thanks to @TechNech, I was able to switchback to using Flexbox only and code is much simpler. Not sure I got desktop totally aligned but good enough
+
+Original write up below...
 
 Spent lots of time on CSS Grid. Should've started without as I understand older browsers do not necessarily support it. I did start with Mobile 1st approach and could've avoided Grid. But, was keen to learn it as it makes so much sense for layout. I've worked alot with spreadsheets so feel comfortable with this approach.
 
